@@ -11,7 +11,7 @@ api_key = os.getenv("GEMINI_API_KEY")
 
 client = genai.Client(api_key=api_key)
 
-prompt =  "Gie me the details of  object present inside the  room"
+prompt =  "Give me the details of  object present inside the  room"
 
 image = Image.open("image.png")
 
@@ -41,6 +41,8 @@ response2 = client.models.generate_content(
 print(response2.text)
 
 prompt3 = "There is a dining table in the room if someone wants to eat something healthy than what dishes can be served on the table"
+
+image = Image.open("image.png")
 
 response3 = client.models.generate_content(
     model = "gemini-3-flash-preview",
